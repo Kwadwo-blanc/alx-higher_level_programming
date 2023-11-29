@@ -9,7 +9,12 @@ output_file="${PYFILE}c"
 
 python3 -m compileall "$PYFILE"
 
-mv "__pycache__/${PYFILE}__pycache__" "$output_file"
+if [ $? -ne 0 ]; then
+    echo "Error: Compilation failed."
+    exit 1
+fi
+
+mv "__pycache__/${PYFILE%.*}.cpython-*.pyc" "$output_file"
 
 rm -rf "__pycache__"
 
