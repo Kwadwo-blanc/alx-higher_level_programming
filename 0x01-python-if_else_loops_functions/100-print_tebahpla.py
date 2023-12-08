@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 for i in range(ord('z'), ord('a') - 1, -1):
-    print("{:c}".format(i), end="" if i % 2 == 0 else "")
+    print("{:c}".format(i),
+            if i % 2 == 0 else "{:c}".format(i).upper(), end="")
