@@ -2,24 +2,11 @@
 
 
 def safe_print_division(a, b):
-    """
-    Divides two integers and prints the result.
-
-    Args:
-        a (int): Dividend.
-        b (int): Divisor.
-
-    Returns:
-        float or None: The result of the division,
-        or None if an exception occurs.
-    """
+    """Returns the division of a by b."""
     try:
-        result = a / b
-    except ZeroDivisionError:
-        return None
-    except TypeError:
-        return None
-    else:
-        print("Inside result: {}".format(result))
+        div = a / b
+    except (TypeError, ZeroDivisionError):
+        div = None
     finally:
-        return result if 'result' in locals() else None
+        print("Inside result: {}".format(div))
+    return (div)
