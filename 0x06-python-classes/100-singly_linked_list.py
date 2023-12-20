@@ -19,7 +19,7 @@ class Node:
 
     @property
     def data(self):
-        """Retrieves the data stored in the node."""
+        """Get the data stored in the node."""
         return self.__data
 
     @data.setter
@@ -49,11 +49,11 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """
-        Inserts a new Node into the correct sorted position in the list.
+        Inserts a new Node into the sign linked list.
 
         Args:
         - value (int): The value to be inserted into the list.
-        """
+        """                                                                                                                                                                                                                         
         new_node = Node(value)
 
         if self.head is None or value < self.head.data:
