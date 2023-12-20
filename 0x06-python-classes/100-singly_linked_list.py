@@ -1,12 +1,10 @@
 #!/usr/bin/python3
+"""Define classes for a singly-linked list."""
+
 
 class Node:
     """
     This class defines a node of a singly linked list.
-
-    Attributes:
-    - data (int): The data stored in the node.
-    - next_node (Node): The reference to the next node in the list.
     """
 
     def __init__(self, data, next_node=None):
@@ -37,9 +35,6 @@ class Node:
 
         Args:
         - value (int): The data to be set.
-
-        Raises:
-        - TypeError: If value is not an integer.
         """
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
@@ -63,9 +58,6 @@ class Node:
 
         Args:
         - value (Node): The next node to be set.
-
-        Raises:
-        - TypeError: If value is not a Node object.
         """
         if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
