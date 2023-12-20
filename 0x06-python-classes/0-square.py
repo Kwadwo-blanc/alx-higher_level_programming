@@ -1,9 +1,6 @@
 #!/usr/bin/python3
+"""Defines a class Square."""
 
 class Square:
-    """
-    This class represents a square.
-
-    The purpose of this class is to define a basic structure for a square.
-    """
+    """Represents a square."""
     pass
