@@ -1,18 +1,10 @@
 #!/usr/bin/python3
+"""Define a class Square."""
+
 
 class Square:
     """
     This class represents a square.
-
-    The purpose of this class is to define a square by having private
-    instance attributes 'size' and 'position' with properties to retrieve
-    and setters to set them. It includes validation for the size and position
-    parameters and public methods to calculate the area of the square and
-    print the square.
-
-    Attributes:
-    - size (int): The size of the square.
-    - position (tuple): The position of the square.
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -43,10 +35,6 @@ class Square:
 
         Args:
         - value (int): The size to set.
-
-        Raises:
-        - TypeError: If value is not an integer.
-        - ValueError: If value is less than 0.
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -72,9 +60,6 @@ class Square:
 
         Args:
         - value (tuple): The position to set.
-
-        Raises:
-        - TypeError: If value is not a tuple of 2 positive integers.
         """
         if not isinstance(value, tuple) or len(value) != 2 or \
                 not all(isinstance(i, int) for i in value) or \
