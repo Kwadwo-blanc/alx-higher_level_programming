@@ -12,8 +12,6 @@ class Rectangle:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
         """
-        self._width = 0
-        self._height = 0
         self.width = width
         self.height = height
 
