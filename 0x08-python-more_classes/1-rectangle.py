@@ -6,9 +6,14 @@ class Rectangle:
     """Represents a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Initializes a new instance of the Rectangle class."""
-        self._width = 0  # Private attribute with leading underscore
-        self._height = 0  # Private attribute with leading underscore
+        """Initializes a new instance of the Rectangle class.
+
+         Args:
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
+        """
+        self._width = 0
+        self._height = 0
         self.width = width
         self.height = height
 
