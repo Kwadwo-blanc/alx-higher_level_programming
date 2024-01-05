@@ -3,10 +3,10 @@
 
 
 class Rectangle:
-    """Represents a rectangle."""
+    """Represents a rectangle. No body."""
 
     def __init__(self, width=0, height=0):
-        """Initializes a new instance of the Rectangle class.
+        """Initializes a new instance of the Rectangle.
 
          Args:
             width (int): The width of the new rectangle.
