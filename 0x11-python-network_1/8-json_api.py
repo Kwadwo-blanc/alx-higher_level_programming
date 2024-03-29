@@ -3,22 +3,22 @@
 Takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user.
 """
 
-import requests
-import sys
+if __name__ == '__main__':
+    import sys
+    import requests
 
-if __name__ == "__main__":
-    if len(sys.argv) == 1:
-        q = ""
+    if len(sys.argv) > 1:
+        q_data = sys.argv[1]
     else:
-        q = sys.argv[1]
+        q_data = ''
     url = 'http://0.0.0.0:5000/search_user'
-    payload = {'q': q}
-    response = requests.post(url, data=payload)
+    response = requests.post(url, data={'q': q_data})
+
     try:
-        json_response = response.json()
-        if json_response:
-            print("[{}] {}".format(json_response.get('id'), json_response.get('name')))
+        result = response.json()
+        if result:
+            print("[{}] {}".format(result.get('id'), result.get('name')))
         else:
             print("No result")
-    except ValueError:
+    except Exception:
         print("Not a valid JSON")
