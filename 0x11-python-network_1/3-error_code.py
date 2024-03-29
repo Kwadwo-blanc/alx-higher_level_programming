@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Takes a URL, sends request to the URL and displays the response (decoded in utf-8).
+Takes a URL, sends request to the URL and displays response(decoded in utf-8).
 """
 
 import urllib.request
